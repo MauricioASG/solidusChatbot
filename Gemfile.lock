@@ -139,6 +139,10 @@ GEM
       devise (>= 2.1.0)
     discard (1.4.0)
       activerecord (>= 4.2, < 9.0)
+    dotenv (3.1.4)
+    dotenv-rails (3.1.4)
+      dotenv (= 3.1.4)
+      railties (>= 6.1)
     erubi (1.13.0)
     ethon (0.16.0)
       ffi (>= 1.15.0)
@@ -463,6 +467,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  dotenv-rails
   gemini-ai
   importmap-rails
   jbuilder

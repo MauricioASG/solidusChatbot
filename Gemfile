@@ -70,6 +70,7 @@ group :test do
   gem "selenium-webdriver"
 
 end
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Solidus gems
 gem "solidus_auth_devise", "~> 2.5"
