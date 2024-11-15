@@ -6,5 +6,3 @@ Rails.application.routes.draw do
   # Montar las rutas de Solidus en la raíz
   mount Spree::Core::Engine, at: '/'
 end
-
-

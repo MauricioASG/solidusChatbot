@@ -16,20 +16,29 @@
     margin-bottom: 0px;
 }
 
-.message-bot {
+.message-bot, .message-user {
     padding: 10px;
     margin: 10px 0;
     border-radius: 10px;
+}
+
+.message-bot {
     background-color: #e3f2fd;
     color: #0d47a1;
     text-align: left;
+}
+
+.message-user {
+    background-color: #dcedc8;
+    color: #33691e;
+    text-align: right;
 }
 
 /* Estilos del contenedor de entrada de texto */
 .input-container {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     margin-top: 15px;
 }
 
