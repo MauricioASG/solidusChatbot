@@ -1,4 +1,5 @@
 # app/controllers/questions_controller.rb
+
 class QuestionsController < ApplicationController
   def index
     session[:conversation] ||= []
@@ -71,4 +72,3 @@ class QuestionsController < ApplicationController
     product_name ? Spree::Product.find_by('lower(name) = ?', product_name.downcase) : nil
   end
 end
-

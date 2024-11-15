@@ -81,3 +81,24 @@
 .voice-button:hover {
     background-color: #7cb342;
 }
+
+/* Estilos existentes ... */
+
+.voice-button.recording {
+    background-color: #ff4081;
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  

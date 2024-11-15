@@ -1,4 +1,3 @@
-<!-- app/views/questions/index.html.erb -->
 <div class="chat-container">
   <div class="messages-container" id="answer">
     <div class="message-bot">
@@ -6,11 +5,7 @@
     </div>
 
     <%= turbo_frame_tag "answer" do %>
-      <!-- Aquí se irán añadiendo los mensajes del chatbot y del usuario -->
-      <%# Inicializamos @conversation para almacenar el historial de mensajes %>
       <% @conversation ||= [] %>
-
-      <%# Mostramos cada mensaje en la conversación %>
       <% @conversation.each do |message| %>
         <div class="<%= message[:type] %>">
           <p><%= message[:text] %></p>
@@ -25,9 +20,11 @@
         <%= text_field_tag "question[question]", nil, placeholder: "Escribe tu pregunta...", class: 'input-field' %>
         <div class="buttons-container">
           <button type="submit" class="send-button">Enviar</button>
-          <button type="button" class="voice-button">Voz</button>
+          <button type="button" class="voice-button" id="voiceButton">Voz</button>
         </div>
       <% end %>
     </div>
   <% end %>
 </div>
+
+<%= javascript_include_tag "voice_recognition" %>
