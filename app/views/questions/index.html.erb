@@ -1,11 +1,12 @@
 # app/views/questions/index.html.erb
 <div class="question-form">
+  <p>¡Hola! Soy tu asistente de compras de Solidus. Pregúntame sobre nuestros productos, precios o cualquier otra cosa en la tienda.</p>
   <%= turbo_frame_tag "answer" do %>
     <p id="answer"></p> <!-- Aquí se mostrará la respuesta -->
   <% end %>
 
   <%= turbo_frame_tag "new_question" do %>
-    <%= form_tag chatbot_path, method: :post, class: 'question-input' do %>
+    <%= form_tag questions_path, method: :post, class: 'question-input' do %>
       <%= label_tag :question, "Ask your question:" %>
       <%= text_field_tag "question[question]", nil, placeholder: "Type your question" %>
       <%= submit_tag "Ask" %>

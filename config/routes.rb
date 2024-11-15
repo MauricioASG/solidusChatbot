@@ -1,10 +1,10 @@
 # config/routes.rb
 Rails.application.routes.draw do
-  # Ruta para el chatbot en /chatbot
-  get 'chatbot', to: 'questions#index'
-  post 'chatbot', to: 'questions#create'
+  resources :questions, only: [:index, :create]
+  get '/chatbot', to: 'questions#index', as: 'chatbot' # Ruta personalizada para el chatbot
 
-  # Monta Solidus en la raíz
+  # Montar las rutas de Solidus en la raíz
   mount Spree::Core::Engine, at: '/'
 end
+
 
