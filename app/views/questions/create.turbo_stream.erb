@@ -1,5 +1,7 @@
 # app/views/questions/create.turbo_stream.erb
-<%= turbo_stream.update "answer" do %>
+<%= turbo_stream.append "answer" do %>
+  <div class="message-bot">
     <p><%= @answer %></p>
-  <% end %>
-  
+  </div>
+<% end %>
+

@@ -1,15 +1,23 @@
-# app/views/questions/index.html.erb
-<div class="question-form">
-  <p>¡Hola! Soy tu asistente de compras de Solidus. Pregúntame sobre nuestros productos, precios o cualquier otra cosa en la tienda.</p>
-  <%= turbo_frame_tag "answer" do %>
-    <p id="answer"></p> <!-- Aquí se mostrará la respuesta -->
-  <% end %>
+<div class="chat-container">
+  <div class="messages-container" id="answer">
+    <div class="message-bot">
+      <p><strong>Asistente de Solidus:</strong> ¡Hola! Soy tu asistente de compras de Solidus. Pregúntame sobre nuestros productos, precios o cualquier otra cosa en la tienda.</p>
+    </div>
+
+    <%= turbo_frame_tag "answer" do %>
+      <!-- Aquí se irán añadiendo los mensajes del chatbot y del usuario -->
+    <% end %>
+  </div>
 
   <%= turbo_frame_tag "new_question" do %>
-    <%= form_tag questions_path, method: :post, class: 'question-input' do %>
-      <%= label_tag :question, "Ask your question:" %>
-      <%= text_field_tag "question[question]", nil, placeholder: "Type your question" %>
-      <%= submit_tag "Ask" %>
-    <% end %>
+    <div class="input-container">
+      <%= form_tag questions_path, method: :post, class: 'question-form' do %>
+        <%= text_field_tag "question[question]", nil, placeholder: "Escribe tu pregunta...", class: 'input-field' %>
+        <div class="buttons-container">
+          <button type="submit" class="send-button">Enviar</button>
+          <button type="button" class="voice-button">Voz</button>
+        </div>
+      <% end %>
+    </div>
   <% end %>
 </div>

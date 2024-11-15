@@ -1,15 +1,73 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/* Estilos generales del contenedor del chat */
+.chat-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos de los mensajes */
+.messages-container {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.message-bot {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: #e3f2fd;
+    color: #0d47a1;
+    text-align: left;
+}
+
+/* Estilos del contenedor de entrada de texto */
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.input-field {
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.buttons-container {
+    display: flex;
+}
+
+.send-button, .voice-button {
+    padding: 10px 15px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.send-button {
+    background-color: #42a5f5;
+    color: white;
+}
+
+.send-button:hover {
+    background-color: #1e88e5;
+}
+
+.voice-button {
+    background-color: #8bc34a;
+    color: white;
+}
+
+.voice-button:hover {
+    background-color: #7cb342;
+}
