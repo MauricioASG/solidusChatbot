@@ -1,13 +1,18 @@
 /* Estilos generales del contenedor del chat */
 .chat-container {
     max-width: 600px;
-    margin: 20px auto;
+    margin: 0 auto; /* Centra horizontalmente */
     padding: 10px;
     border-radius: 8px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-family: Arial, sans-serif;
+    position: absolute; /* Permite centrar en ambas direcciones */
+    top: 50%; /* Posiciona el centro verticalmente */
+    left: 50%; /* Posiciona el centro horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el centro exacto */
 }
+
 
 /* Estilos de los mensajes */
 .messages-container {
@@ -17,35 +22,35 @@
 }
 
 .message-bot {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .message-bot .avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .message-user {
-    text-align: right;
-    background-color: #dcedc8;
-    color: #33691e;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 10px;
-  }
-  
-  .message-bot p {
-    background-color: #e3f2fd;
-    color: #0d47a1;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 10px;
-  }
-  
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.message-bot .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.message-user {
+  text-align: right;
+  background-color: #dcedc8;
+  color: #33691e;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.message-bot p {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 
 /* Estilos del contenedor de entrada de texto */
 .input-container {
@@ -87,7 +92,7 @@
 }
 
 .voice-button {
-    background-color: #8bc34a;
+    background-color: #0d0e0d;
     color: white;
 }
 
