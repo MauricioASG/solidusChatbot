@@ -1,3 +1,5 @@
+// /home/mauriciosg/solidusChatbot/app/javascript/voice_recognition.js
+
 document.addEventListener('turbo:load', function() {
     const voiceButton = document.getElementById('voiceButton');
     const questionInput = document.querySelector('input[name="question[question]"]');
