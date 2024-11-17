@@ -1,6 +1,7 @@
 <div class="chat-container">
   <div class="messages-container" id="answer">
     <div class="message-bot">
+      <img src="<%= asset_path('avatar.png') %>" alt="Asistente" class="avatar">
       <p><strong>Asistente de Solidus:</strong> ¡Hola! Soy tu asistente de compras de Solidus. Pregúntame sobre nuestros productos, precios o cualquier otra cosa en la tienda.</p>
     </div>
 
@@ -8,6 +9,9 @@
       <% @conversation ||= [] %>
       <% @conversation.each do |message| %>
         <div class="<%= message[:type] %>">
+          <% if message[:type] == 'message-bot' %>
+            <img src="<%= asset_path('avatar.png') %>" alt="Asistente" class="avatar">
+          <% end %>
           <p><%= message[:text] %></p>
         </div>
       <% end %>

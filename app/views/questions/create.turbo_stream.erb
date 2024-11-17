@@ -1,5 +1,4 @@
 # app/views/questions/create.turbo_stream.erb
-<!-- app/views/questions/create.turbo_stream.erb -->
 <%= turbo_stream.append "answer" do %>
   <!-- Mensaje del usuario -->
   <div class="message-user">
@@ -7,6 +6,7 @@
   </div>
   <!-- Respuesta del bot -->
   <div class="message-bot">
+    <img src="<%= asset_path('avatar.png') %>" alt="Asistente" class="avatar">
     <p><%= @answer %></p>
   </div>
 <% end %>
