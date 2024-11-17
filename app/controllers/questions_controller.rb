@@ -1,5 +1,4 @@
 # app/controllers/questions_controller.rb
-
 class QuestionsController < ApplicationController
   def index
     session[:conversation] ||= []
@@ -9,6 +8,9 @@ class QuestionsController < ApplicationController
     question_text = params[:question][:question]
     session[:conversation] ||= []
     session[:conversation] << { type: 'message-user', text: question_text }
+
+    # Limitar a las últimas 10 interacciones
+    session[:conversation] = session[:conversation].last(10)
 
     # Comprobamos si la pregunta es sobre un producto específico
     product = find_product_in_question(question_text)
